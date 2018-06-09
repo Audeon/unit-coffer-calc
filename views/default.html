@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Unit Coffer Calculator</title>
+    <style type="text/css">
+        .url-copy {
+            position:absolute;
+            top:0;
+            right:0;
+            margin: 3px 3px 3px 3px;
+        }
+    </style>
+</head>
+<body>
+<h3>Unit Coffer Calculator</h3>
+<div class="url-copy">
+    <button id="copyButton">Copy URL</button> <input id="copyTarget" value="<?=$query_arguments?>" size="25"><br \>
+    <div style="text-align: right;"><span id="msg"></span></div>
+</div>
+<div>
+    <form action="<?=$filename?>" method="POST">
+        Current Member Count:<br />
+        <input type="text" name="current_member_count" value="<?=$form_current_member_count?>">
+        <br /><br />
+        Goal Member Count:<br />
+        <input type="text" name="goal_member_count" value="<?=$form_goal_member_count?>">
+        <br /><br />
+        Coffer Balance:<br />
+        <input type="text" name="current_coffer_balance" value="<?=$form_current_coffer_balance?>">
+        <br /><br />
+        <input type="submit" value="Calculate">
+    </form>
+</div>
